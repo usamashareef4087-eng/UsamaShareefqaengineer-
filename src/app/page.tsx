@@ -298,7 +298,14 @@ export default async function Home() {
         <header className="site-header">
           <div className="wrap header-inner">
             <Link href="/" className="wordmark" aria-label="Usama Shareef home">
-              USAMA SHAREEF<span>Software Quality Assurance</span>
+              <Image
+                className="brand-logo"
+                src="/usama-shareef-logo-compact.png"
+                alt=""
+                width={124}
+                height={85}
+                priority
+              />
             </Link>
             <nav className="desktop-nav" aria-label="Main navigation">
               {pageNav.map((item) => (

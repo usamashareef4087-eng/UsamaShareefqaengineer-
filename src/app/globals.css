@@ -77,20 +77,13 @@ main {
   gap: 20px;
 }
 .wordmark {
-  font-size: 17px;
-  font-weight: 750;
-  letter-spacing: -0.045em;
-  line-height: 1.05;
-  white-space: nowrap;
-}
-.wordmark span {
   display: block;
-  color: var(--muted);
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-  margin-top: 5px;
+  line-height: 0;
+}
+.brand-logo {
+  display: block;
+  width: 108px;
+  height: auto;
 }
 .desktop-nav {
   display: flex;
