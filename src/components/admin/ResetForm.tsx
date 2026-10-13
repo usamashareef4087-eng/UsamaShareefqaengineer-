@@ -1,0 +1,4 @@
+'use client';
+import Link from 'next/link';
+import {useState,type FormEvent} from 'react';
+export default function ResetForm(){const [message,setMessage]=useState('');async function submit(e:FormEvent<HTMLFormElement>){e.preventDefault();const email=(e.currentTarget.elements.namedItem('email') as HTMLInputElement).value;try{const r=await fetch('/api/auth/reset',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email})});if(!r.ok)throw new Error('Unable to send recovery link. Please try again.');setMessage('If this account exists, a recovery link has been sent.')}catch(error){setMessage(error instanceof Error?error.message:'Please try again.')}}return <form className="auth-form" onSubmit={submit}><label>Admin email<input name="email" type="email" required autoComplete="email"/></label><button>Send recovery link</button><p role="status">{message}</p><Link href="/admin/login">Back to sign in</Link></form>}

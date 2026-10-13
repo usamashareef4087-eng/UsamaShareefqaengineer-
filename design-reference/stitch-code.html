@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Usama Shareef — QA Team Lead &amp; Software Quality Assurance Consultant</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "warm-white": "#FAFAF8",
+            "soft-gray": "#F3F5F7",
+            "deep-navy": "#14243A",
+            "slate-gray": "#586579",
+            "corp-blue": "#2563EB",
+            "light-border": "#E4E8ED",
+            "midnight-navy": "#101D32"
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-[#FAFAF8] text-[#14243A] font-sans antialiased min-h-screen flex flex-col selection:bg-[#2563EB] selection:text-white">
+<!-- Interactive Device Viewport Simulator Bar -->
+<aside aria-label="Device Viewport Controls" class="bg-[#F3F5F7] border-b border-[#E4E8ED] py-2 px-4 text-xs select-none sticky top-0 z-50">
+<div class="max-w-7xl mx-auto flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="inline-block w-2 h-2 rounded-full bg-[#2563EB] animate-pulse"></span>
+<span class="text-[11px] font-bold text-[#586579] uppercase tracking-wider">Viewport Simulator</span>
+<span class="hidden sm:inline text-[#E4E8ED]">|</span>
+<span class="hidden sm:inline text-[12px] text-[#586579]">Live Executive Swiss Layout Preview</span>
+</div>
+<div class="inline-flex items-center bg-white p-0.5 rounded border border-[#E4E8ED] shadow-sm">
+<button class="px-3 py-1 text-xs rounded bg-[#E4E8ED] text-[#14243A] font-semibold flex items-center gap-1.5 transition-colors" id="view-desktop" onclick="setViewport('desktop')">
+<span class="material-symbols-outlined text-[15px]">desktop_windows</span>
+<span class="hidden sm:inline">Desktop</span> 1440px
+        </button>
+<button class="px-3 py-1 text-xs rounded text-[#586579] hover:text-[#14243A] flex items-center gap-1.5 transition-colors" id="view-tablet" onclick="setViewport('tablet')">
+<span class="material-symbols-outlined text-[15px]">tablet_mac</span>
+<span class="hidden sm:inline">Tablet</span> 768px
+        </button>
+<button class="px-3 py-1 text-xs rounded text-[#586579] hover:text-[#14243A] flex items-center gap-1.5 transition-colors" id="view-mobile" onclick="setViewport('mobile')">
+<span class="material-symbols-outlined text-[15px]">smartphone</span>
+<span class="hidden sm:inline">Mobile</span> 390px
+        </button>
+</div>
+</div>
+</aside>
+<!-- Viewport Outer Shell Container -->
+<div class="w-full mx-auto transition-all duration-300 ease-in-out flex-1 flex flex-col bg-[#FAFAF8] shadow-none border-x border-transparent" id="viewport-frame">
+<!-- SECTION 01: PREMIUM NAVIGATION BAR -->
+<header class="bg-[#FAFAF8]/95 backdrop-blur-md border-b border-[#E4E8ED] top-0 sticky z-40 transition-all duration-200">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-[84px] flex items-center justify-between">
+<!-- Brand Wordmark & Subtitle -->
+<a class="flex flex-col group cursor-pointer" href="#about-hero">
+<span class="text-base sm:text-lg tracking-tight text-[#14243A] uppercase font-bold group-hover:text-[#2563EB] transition-colors leading-tight">
+            USAMA SHAREEF
+          </span>
+<span class="text-[9px] tracking-[1.5px] text-[#586579] uppercase font-semibold mt-0.5">
+            SOFTWARE QUALITY ASSURANCE
+          </span>
+</a>
+<!-- Desktop Navigation Links -->
+<nav class="hidden md:flex items-center space-x-7 lg:space-x-8 text-sm">
+<a class="text-[#586579] hover:text-[#14243A] font-medium transition-colors" href="#about">About</a>
+<a class="text-[#586579] hover:text-[#14243A] font-medium transition-colors" href="#expertise">Expertise</a>
+<a class="text-[#586579] hover:text-[#14243A] font-medium transition-colors" href="#services">Services</a>
+<a class="text-[#586579] hover:text-[#14243A] font-medium transition-colors" href="#experience">Experience</a>
+<a class="text-[#586579] hover:text-[#14243A] font-medium transition-colors" href="#work">Work</a>
+<a class="text-[#586579] hover:text-[#14243A] font-medium transition-colors" href="#contact">Contact</a>
+</nav>
+<!-- Trailing Primary Action -->
+<div class="flex items-center">
+<a class="h-[44px] px-5 bg-[#14243A] text-white hover:bg-[#2563EB] rounded font-semibold text-xs uppercase tracking-wider inline-flex items-center justify-center gap-2 transition-all duration-150 active:scale-95 shadow-sm" href="#contact">
+<span>Let's Talk</span>
+<span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</header>
+<!-- MAIN EDITORIAL CANVAS -->
+<main class="flex-1 flex flex-col">
+<!-- SECTION 02: TEXT-LED HERO SECTION (Asymmetric Swiss Editorial Authority) -->
+<section class="relative pt-16 pb-20 lg:pt-24 lg:pb-28 border-b border-[#E4E8ED] bg-[#FAFAF8]" id="about-hero">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-start">
+<!-- Left Column: Core Text Proposition (8 cols) -->
+<div class="lg:col-span-8 flex flex-col pr-0 lg:pr-8">
+<!-- Eyebrow -->
+<div class="inline-flex items-center gap-2 mb-6">
+<span class="w-2 h-2 rounded-full bg-[#2563EB]"></span>
+<span class="text-xs font-bold uppercase tracking-[1.5px] text-[#2563EB]">
+                  QA TEAM LEAD · SOFTWARE QUALITY ASSURANCE
+                </span>
+</div>
+<!-- Main Editorial Headline -->
+<h1 class="text-3xl sm:text-4xl lg:text-[3.5rem] font-bold text-[#14243A] tracking-tight leading-[1.12] max-w-3xl">
+                Reliable Software. <span class="text-[#2563EB]">Confident Releases.</span> Better User Experiences.
+              </h1>
+<!-- Exact Description Text -->
+<p class="mt-8 mb-9 text-base sm:text-lg text-[#586579] leading-relaxed max-w-2xl font-normal">
+                I’m Usama Shareef, a QA professional helping startups, software agencies, and growing businesses improve software reliability through manual testing, test automation, API testing, and structured quality assurance.
+              </p>
+<!-- Two CTAs -->
+<div class="flex flex-wrap items-center gap-4 mb-12">
+<a class="h-[52px] px-7 bg-[#2563EB] hover:bg-[#1d4ed8] text-white rounded font-semibold text-sm inline-flex items-center justify-center gap-2.5 transition-all duration-150 active:scale-95 shadow-sm" href="#contact">
+<span>Discuss Your QA Requirements</span>
+<span class="material-symbols-outlined text-[17px]">arrow_forward</span>
+</a>
+<a class="h-[52px] px-7 bg-white hover:bg-[#F3F5F7] text-[#14243A] border border-[#E4E8ED] rounded font-semibold text-sm inline-flex items-center justify-center gap-2 transition-colors duration-150" href="#work">
+<span>Explore My Work</span>
+</a>
+</div>
+<!-- Supporting Row -->
+<div class="pt-8 border-t border-[#E4E8ED] flex flex-wrap items-center text-xs sm:text-sm text-[#586579] font-medium">
+<span class="text-[#14243A]">Manual Testing</span>
+<span class="mx-3 text-[#E4E8ED]">/</span>
+<span class="text-[#14243A]">Test Automation</span>
+<span class="mx-3 text-[#E4E8ED]">/</span>
+<span class="text-[#14243A]">API Testing</span>
+<span class="mx-3 text-[#E4E8ED]">/</span>
+<span class="text-[#14243A]">QA Leadership</span>
+</div>
+</div>
+<!-- Right Column: Typographic Metadata Column (4 cols) -->
+<div class="lg:col-span-4 border-l border-[#E4E8ED] lg:pl-8 flex flex-col justify-between self-stretch pt-2">
+<div class="space-y-6">
+<div class="text-xs font-mono font-bold tracking-[2px] text-[#586579] uppercase">
+                  01 / INTRODUCTION
+                </div>
+<div class="border-b border-[#E4E8ED] pb-5">
+<div class="text-[11px] uppercase tracking-wider text-[#586579] font-medium">Positioning</div>
+<div class="text-sm font-semibold text-[#14243A] mt-1">Independent QA Consultant &amp; Team Lead</div>
+</div>
+<div class="border-b border-[#E4E8ED] pb-5">
+<div class="text-[11px] uppercase tracking-wider text-[#586579] font-medium">Core Focus</div>
+<div class="text-sm font-semibold text-[#14243A] mt-1">Risk Reduction, Functional Integrity &amp; Test Architecture</div>
+</div>
+<div class="border-b border-[#E4E8ED] pb-5">
+<div class="text-[11px] uppercase tracking-wider text-[#586579] font-medium">Engagements</div>
+<div class="text-sm font-semibold text-[#14243A] mt-1">Sprint Audits, E2E Automation, Release Governance</div>
+</div>
+</div>
+<div class="mt-8 lg:mt-12 bg-white border border-[#E4E8ED] p-5 rounded">
+<div class="flex items-center gap-2 mb-2">
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-600"></span>
+</span>
+<span class="text-xs font-semibold text-emerald-800 uppercase tracking-wider">Consulting Status</span>
+</div>
+<p class="text-xs text-[#586579] leading-relaxed">
+                  Available for strategic advisory, full QA lifecycle engagements, and contract quality leadership.
+                </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 03: BUSINESS PROBLEMS I HELP SOLVE -->
+<section class="py-20 lg:py-24 bg-[#F3F5F7] border-b border-[#E4E8ED]">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="max-w-3xl mb-14">
+<span class="text-xs font-bold uppercase tracking-[1.5px] text-[#2563EB]">THE CHALLENGES</span>
+<h2 class="mt-2 text-2xl sm:text-3xl lg:text-4xl font-bold text-[#14243A] tracking-tight">
+              Software issues shouldn't become business problems.
+            </h2>
+<p class="mt-4 text-base text-[#586579] leading-relaxed">
+              When testing is rushed or unstructured, critical defects bypass internal review and degrade customer trust in production. Systematic QA solves root causes before rollout.
+            </p>
+</div>
+<!-- 3 Equal Columns -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-white border border-[#E4E8ED] p-8 rounded flex flex-col justify-between">
+<div>
+<span class="text-xs font-mono font-bold text-[#2563EB] tracking-wider">01</span>
+<h3 class="text-lg font-bold text-[#14243A] mt-4 mb-3">Bugs Discovered Too Late</h3>
+<p class="text-sm text-[#586579] leading-relaxed">
+                  Issues caught after deployment cost 10x more to remediate, frustrate paying customers, and pull core engineers away from roadmap deliverables.
+                </p>
+</div>
+<div class="mt-6 pt-4 border-t border-[#E4E8ED] text-xs font-semibold text-[#14243A]">
+                Shift-left verification early in the sprint
+              </div>
+</div>
+<div class="bg-white border border-[#E4E8ED] p-8 rounded flex flex-col justify-between">
+<div>
+<span class="text-xs font-mono font-bold text-[#2563EB] tracking-wider">02</span>
+<h3 class="text-lg font-bold text-[#14243A] mt-4 mb-3">Inconsistent Product Quality</h3>
+<p class="text-sm text-[#586579] leading-relaxed">
+                  Features work on one browser or OS but break on others. Without standard regression suites, product consistency across releases remains hit-or-miss.
+                </p>
+</div>
+<div class="mt-6 pt-4 border-t border-[#E4E8ED] text-xs font-semibold text-[#14243A]">
+                Structured cross-platform matrices
+              </div>
+</div>
+<div class="bg-white border border-[#E4E8ED] p-8 rounded flex flex-col justify-between">
+<div>
+<span class="text-xs font-mono font-bold text-[#2563EB] tracking-wider">03</span>
+<h3 class="text-lg font-bold text-[#14243A] mt-4 mb-3">Uncertainty Before Release</h3>
+<p class="text-sm text-[#586579] leading-relaxed">
+                  Shipping code without definitive pass/fail test signoffs creates team anxiety and unplanned hotfixes during deployment cycles.
+                </p>
+</div>
+<div class="mt-6 pt-4 border-t border-[#E4E8ED] text-xs font-semibold text-[#14243A]">
+                Clear quality gates &amp; executive sign-offs
+              </div>
+</div>
+</div>
+<div class="mt-12 text-center border-t border-[#E4E8ED] pt-8">
+<p class="text-base font-semibold text-[#14243A]">
+              "Better testing creates clearer decisions before release."
+            </p>
+</div>
+</div>
+</section>
+<!-- SECTION 04: ABOUT USAMA -->
+<section class="py-20 lg:py-24 bg-[#FAFAF8] border-b border-[#E4E8ED]" id="about">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Left 35% (lg:col-span-4) -->
+<div class="lg:col-span-4">
+<span class="text-xs font-bold uppercase tracking-[1.5px] text-[#2563EB]">ABOUT ME</span>
+<h2 class="mt-2 text-2xl sm:text-3xl font-bold text-[#14243A] tracking-tight leading-snug">
+                A quality-focused professional with a practical approach.
+              </h2>
+<div class="mt-8 p-6 bg-white border border-[#E4E8ED] rounded">
+<div class="text-xs font-mono font-bold uppercase tracking-wider text-[#586579]">Discipline</div>
+<div class="text-sm font-semibold text-[#14243A] mt-1">End-to-End Quality Engineering</div>
+<div class="mt-4 pt-4 border-t border-[#E4E8ED]">
+<a class="text-xs font-semibold text-[#2563EB] hover:underline inline-flex items-center gap-1.5" href="https://linkedin.com" rel="noopener noreferrer" target="_blank">
+<span>Connect on LinkedIn</span>
+<span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Right 65% (lg:col-span-8) -->
+<div class="lg:col-span-8 space-y-6">
+<p class="text-base text-[#586579] leading-relaxed">
+                I am a QA Team Lead and software testing specialist with a proven track record of establishing dependable QA practices across fast-paced development environments. My focus is centered on identifying functional defects, designing structured test documentation, and building test automation frameworks that reduce deployment stress.
+              </p>
+<p class="text-base text-[#586579] leading-relaxed">
+                Rather than treating quality assurance as an afterthought, I partner with developers, product managers, and founders to integrate quality criteria into every stage of the development lifecycle. My philosophy is rooted in objective validation, clear risk communication, and delivering software that end users can trust without hesitation.
+              </p>
+<!-- Professional Summary Table / Key Rows -->
+<div class="mt-8 border-t border-[#E4E8ED] divide-y divide-[#E4E8ED]">
+<div class="py-4 grid grid-cols-1 sm:grid-cols-3 gap-2">
+<span class="text-xs uppercase tracking-wider text-[#586579] font-medium">Current Role</span>
+<span class="sm:col-span-2 text-sm font-semibold text-[#14243A]">QA Team Lead at Ainovex Technologies</span>
+</div>
+<div class="py-4 grid grid-cols-1 sm:grid-cols-3 gap-2">
+<span class="text-xs uppercase tracking-wider text-[#586579] font-medium">Specialization</span>
+<span class="sm:col-span-2 text-sm font-semibold text-[#14243A]">Manual &amp; Automated Testing, API Verification, QA Architecture</span>
+</div>
+<div class="py-4 grid grid-cols-1 sm:grid-cols-3 gap-2">
+<span class="text-xs uppercase tracking-wider text-[#586579] font-medium">Working Approach</span>
+<span class="sm:col-span-2 text-sm font-semibold text-[#14243A]">Risk-based test scoping, metric-backed reporting, structured regression</span>
+</div>
+<div class="py-4 grid grid-cols-1 sm:grid-cols-3 gap-2">
+<span class="text-xs uppercase tracking-wider text-[#586579] font-medium">Core Tools</span>
+<span class="sm:col-span-2 text-sm font-semibold text-[#14243A]">Cypress, Selenium, Postman, Jira, GitHub Actions, JMeter</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 05: CORE EXPERTISE (2-Column x 3-Row Grid) -->
+<section class="py-20 lg:py-24 bg-white border-b border-[#E4E8ED]" id="expertise">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="max-w-3xl mb-14">
+<span class="text-xs font-bold uppercase tracking-[1.5px] text-[#2563EB]">CORE EXPERTISE</span>
+<h2 class="mt-2 text-2xl sm:text-3xl lg:text-4xl font-bold text-[#14243A] tracking-tight">
+              Six foundational pillars of high-reliability testing.
+            </h2>
+<p class="mt-4 text-base text-[#586579] leading-relaxed">
+              Comprehensive capabilities spanning functional rigor, automated execution, and release management.
+            </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- 01 Manual & Functional -->
+<div class="p-8 border border-[#E4E8ED] bg-[#FAFAF8] rounded">
+<span class="text-xs font-mono font-bold text-[#2563EB]">01</span>
+<h3 class="text-lg font-bold text-[#14243A] mt-3 mb-2">Manual &amp; Functional Testing</h3>
+<p class="text-sm text-[#586579] leading-relaxed">
+                Detailed test case execution, exploratory testing, boundary value analysis, and user story verification to catch real-world behavioral bugs.
+              </p>
+</div>
+<!-- 02 Test Automation -->
+<div class="p-8 border border-[#E4E8ED] bg-[#FAFAF8] rounded">
+<span class="text-xs font-mono font-bold text-[#2563EB]">02</span>
+<h3 class="text-lg font-bold text-[#14243A] mt-3 mb-2">Test Automation</h3>
+<p class="text-sm text-[#586579] leading-relaxed">
+                Design and maintenance of repeatable UI regression suites using Cypress and Selenium, integrated seamlessly into CI/CD build steps.
+              </p>
+</div>
+<!-- 03 API & Integration -->
+<div class="p-8 border border-[#E4E8ED] bg-[#FAFAF8] rounded">
+<span class="text-xs font-mono font-bold text-[#2563EB]">03</span>
+<h3 class="text-lg font-bold text-[#14243A] mt-3 mb-2">API &amp; Integration Testing</h3>
+<p class="text-sm text-[#586579] leading-relaxed">
+                REST API validation with Postman, ensuring accurate response payloads, status code behavior, schema validation, and third-party webhook reliability.
+              </p>
+</div>
+<!-- 04 Performance & Load -->
+<div class="p-8 border border-[#E4E8ED] bg-[#FAFAF8] rounded">
+<span class="text-xs font-mono font-bold text-[#2563EB]">04</span>
+<h3 class="text-lg font-bold text-[#14243A] mt-3 mb-2">Performance &amp; Load Testing</h3>
+<p class="text-sm text-[#586579] leading-relaxed">
+                Evaluating system response times, concurrent request capacity, and server bottleneck boundaries using Apache JMeter.
+              </p>
+</div>
+<!-- 05 Web & Mobile -->
+<div class="p-8 border border-[#E4E8ED] bg-[#FAFAF8] rounded">
+<span class="text-xs font-mono font-bold text-[#2563EB]">05</span>
+<h3 class="text-lg font-bold text-[#14243A] mt-3 mb-2">Web &amp; Mobile Testing</h3>
+<p class="text-sm text-[#586579] leading-relaxed">
+                Cross-browser rendering tests (Chrome, Safari, Firefox, Edge) and mobile responsiveness across multiple iOS and Android viewport sizes.
+              </p>
+</div>
+<!-- 06 QA Process & Leadership -->
+<div class="p-8 border border-[#E4E8ED] bg-[#FAFAF8] rounded">
+<span class="text-xs font-mono font-bold text-[#2563EB]">06</span>
+<h3 class="text-lg font-bold text-[#14243A] mt-3 mb-2">QA Process &amp; Team Leadership</h3>
+<p class="text-sm text-[#586579] leading-relaxed">
+                Leading QA teams, establishing Jira defect management standards, mentoring junior engineers, and setting release sign-off governance.
+              </p>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 06: QA SERVICES -->
+<section class="py-20 lg:py-24 bg-[#F3F5F7] border-b border-[#E4E8ED]" id="services">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="max-w-3xl mb-14">
+<span class="text-xs font-bold uppercase tracking-[1.5px] text-[#2563EB]">HOW I CAN HELP</span>
+<h2 class="mt-2 text-2xl sm:text-3xl lg:text-4xl font-bold text-[#14243A] tracking-tight">
+              Independent QA support for teams that care about quality.
+            </h2>
+<p class="mt-4 text-base text-[#586579] leading-relaxed">
+              Flexible consulting arrangements tailored for product releases, ongoing agile sprints, and test suite restructuring.
+            </p>
+</div>
+<!-- 4 Premium Service Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Service 1 -->
+<div class="bg-white border border-[#E4E8ED] p-8 rounded flex flex-col justify-between">
+<div>
+<span class="text-xs font-mono font-bold text-[#586579] uppercase">SERVICE 01</span>
+<h3 class="text-xl font-bold text-[#14243A] mt-2 mb-3">Pre-Launch QA Audit</h3>
+<p class="text-sm text-[#586579] leading-relaxed mb-6">
+                  A comprehensive, deep-dive testing cycle conducted prior to public product launches or major version releases.
+                </p>
+<div class="space-y-2 text-xs text-[#14243A]">
+<div class="font-semibold uppercase tracking-wider text-[#586579] mb-1">Typical Deliverables:</div>
+<div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#2563EB]"></span>Full defect register with reproduction steps</div>
+<div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#2563EB]"></span>Critical blocker risk assessment</div>
+<div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#2563EB]"></span>Cross-browser compatibility scorecard</div>
+</div>
+</div>
+<div class="mt-8 pt-4 border-t border-[#E4E8ED]">
+<a class="text-xs font-semibold text-[#2563EB] hover:underline inline-flex items-center gap-1.5" href="#contact">
+<span>Discuss This Service</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Service 2 -->
+<div class="bg-white border border-[#E4E8ED] p-8 rounded flex flex-col justify-between">
+<div>
+<span class="text-xs font-mono font-bold text-[#586579] uppercase">SERVICE 02</span>
+<h3 class="text-xl font-bold text-[#14243A] mt-2 mb-3">Ongoing Sprint QA Support</h3>
+<p class="text-sm text-[#586579] leading-relaxed mb-6">
+                  Embedded QA within your agile development sprint cycle to review tickets, execute tests, and prevent scope drift.
+                </p>
+<div class="space-y-2 text-xs text-[#14243A]">
+<div class="font-semibold uppercase tracking-wider text-[#586579] mb-1">Typical Deliverables:</div>
+<div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#2563EB]"></span>Sprint user story acceptance testing</div>
+<div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#2563EB]"></span>Regression test execution per build</div>
+<div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#2563EB]"></span>Daily standup defect synchronization</div>
+</div>
+</div>
+<div class="mt-8 pt-4 border-t border-[#E4E8ED]">
+<a class="text-xs font-semibold text-[#2563EB] hover:underline inline-flex items-center gap-1.5" href="#contact">
+<span>Discuss This Service</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Service 3 -->
+<div class="bg-white border border-[#E4E8ED] p-8 rounded flex flex-col justify-between">
+<div>
+<span class="text-xs font-mono font-bold text-[#586579] uppercase">SERVICE 03</span>
+<h3 class="text-xl font-bold text-[#14243A] mt-2 mb-3">Test Automation Setup</h3>
+<p class="text-sm text-[#586579] leading-relaxed mb-6">
+                  Build scalable automated regression testing suites from scratch, reducing repetitive manual testing overhead.
+                </p>
+<div class="space-y-2 text-xs text-[#14243A]">
+<div class="font-semibold uppercase tracking-wider text-[#586579] mb-1">Typical Deliverables:</div>
+<div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#2563EB]"></span>Modular Cypress / Selenium test architecture</div>
+<div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#2563EB]"></span>Automated nightly build reports</div>
+<div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#2563EB]"></span>Framework handover and maintenance guide</div>
+</div>
+</div>
+<div class="mt-8 pt-4 border-t border-[#E4E8ED]">
+<a class="text-xs font-semibold text-[#2563EB] hover:underline inline-flex items-center gap-1.5" href="#contact">
+<span>Discuss This Service</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Service 4 -->
+<div class="bg-white border border-[#E4E8ED] p-8 rounded flex flex-col justify-between">
+<div>
+<span class="text-xs font-mono font-bold text-[#586579] uppercase">SERVICE 04</span>
+<h3 class="text-xl font-bold text-[#14243A] mt-2 mb-3">QA Process Consulting &amp; Advisory</h3>
+<p class="text-sm text-[#586579] leading-relaxed mb-6">
+                  Evaluating and restructuring internal QA processes to boost engineering velocity and reduce escaped bugs.
+                </p>
+<div class="space-y-2 text-xs text-[#14243A]">
+<div class="font-semibold uppercase tracking-wider text-[#586579] mb-1">Typical Deliverables:</div>
+<div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#2563EB]"></span>Standardized QA documentation templates</div>
+<div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#2563EB]"></span>Bug triage workflow guidelines</div>
+<div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#2563EB]"></span>QA team leadership and hiring benchmarks</div>
+</div>
+</div>
+<div class="mt-8 pt-4 border-t border-[#E4E8ED]">
+<a class="text-xs font-semibold text-[#2563EB] hover:underline inline-flex items-center gap-1.5" href="#contact">
+<span>Discuss This Service</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 07: PROFESSIONAL EXPERIENCE -->
+<section class="py-20 lg:py-24 bg-[#FAFAF8] border-b border-[#E4E8ED]" id="experience">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="max-w-3xl mb-14">
+<span class="text-xs font-bold uppercase tracking-[1.5px] text-[#2563EB]">EXPERIENCE</span>
+<h2 class="mt-2 text-2xl sm:text-3xl lg:text-4xl font-bold text-[#14243A] tracking-tight">
+              Experience built through real-world quality assurance.
+            </h2>
+<p class="mt-4 text-base text-[#586579] leading-relaxed">
+              Demonstrated leadership and hands-on execution across agency, freelance, enterprise, and corporate domains.
+            </p>
+</div>
+<!-- Vertical Timeline with 5 Exact Roles -->
+<div class="relative border-l border-[#E4E8ED] ml-4 md:ml-8 pl-8 md:pl-12 space-y-12">
+<!-- Role 1 -->
+<div class="relative">
+<span class="absolute -left-[37px] md:-left-[53px] top-1.5 w-3.5 h-3.5 rounded-full bg-[#2563EB] border-4 border-[#FAFAF8]"></span>
+<div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+<h3 class="text-lg font-bold text-[#14243A]">QA Team Lead · Ainovex Technologies</h3>
+<span class="text-xs font-mono text-[#586579]">2023 — Present</span>
+</div>
+<p class="mt-2 text-sm text-[#586579] leading-relaxed max-w-3xl">
+                Leading the software quality assurance function, mentoring testing engineers, structuring release validation gates, and overseeing end-to-end testing across web and mobile applications.
+              </p>
+</div>
+<!-- Role 2 -->
+<div class="relative">
+<span class="absolute -left-[37px] md:-left-[53px] top-1.5 w-3.5 h-3.5 rounded-full bg-[#14243A] border-4 border-[#FAFAF8]"></span>
+<div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+<h3 class="text-lg font-bold text-[#14243A]">Software Quality Assurance Consultant · Upwork (Freelance)</h3>
+<span class="text-xs font-mono text-[#586579]">2022 — Present</span>
+</div>
+<p class="mt-2 text-sm text-[#586579] leading-relaxed max-w-3xl">
+                Delivering independent QA reviews, test case authoring, exploratory testing, and bug tracking for global software startups and technical founders.
+              </p>
+</div>
+<!-- Role 3 -->
+<div class="relative">
+<span class="absolute -left-[37px] md:-left-[53px] top-1.5 w-3.5 h-3.5 rounded-full bg-[#14243A] border-4 border-[#FAFAF8]"></span>
+<div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+<h3 class="text-lg font-bold text-[#14243A]">QA Engineer · Stellix Soft</h3>
+<span class="text-xs font-mono text-[#586579]">2022 — 2023</span>
+</div>
+<p class="mt-2 text-sm text-[#586579] leading-relaxed max-w-3xl">
+                Executed functional, regression, and cross-browser testing for software clients. Maintained comprehensive test suites and documented bugs with precise reproducibility records.
+              </p>
+</div>
+<!-- Role 4 -->
+<div class="relative">
+<span class="absolute -left-[37px] md:-left-[53px] top-1.5 w-3.5 h-3.5 rounded-full bg-[#14243A] border-4 border-[#FAFAF8]"></span>
+<div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+<h3 class="text-lg font-bold text-[#14243A]">QA Engineer · eConception</h3>
+<span class="text-xs font-mono text-[#586579]">2021 — 2022</span>
+</div>
+<p class="mt-2 text-sm text-[#586579] leading-relaxed max-w-3xl">
+                Collaborated with agile engineering squads on test scenario definition, defect reporting in Jira, and pre-deployment smoke checks.
+              </p>
+</div>
+<!-- Role 5 -->
+<div class="relative">
+<span class="absolute -left-[37px] md:-left-[53px] top-1.5 w-3.5 h-3.5 rounded-full bg-[#14243A] border-4 border-[#FAFAF8]"></span>
+<div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+<h3 class="text-lg font-bold text-[#14243A]">Quality Assurance Intern · Bureau Veritas Group</h3>
+<span class="text-xs font-mono text-[#586579]">2021</span>
+</div>
+<p class="mt-2 text-sm text-[#586579] leading-relaxed max-w-3xl">
+                Gained early enterprise testing discipline, compliance audit exposure, and quality assurance process documentation standards within an international organization.
+              </p>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 08: SELECTED WORK & CASE STUDIES -->
+<section class="py-20 lg:py-24 bg-white border-b border-[#E4E8ED]" id="work">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="max-w-3xl mb-14">
+<span class="text-xs font-bold uppercase tracking-[1.5px] text-[#2563EB]">PROJECTS &amp; PORTFOLIO</span>
+<h2 class="mt-2 text-2xl sm:text-3xl lg:text-4xl font-bold text-[#14243A] tracking-tight">
+              Selected work and technical projects.
+            </h2>
+<p class="mt-4 text-base text-[#586579] leading-relaxed">
+              Applied software engineering and rigorous verification methodologies across complex technical domains.
+            </p>
+</div>
+<!-- 3 Project Cards + Reserved Box -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Project 1 -->
+<div class="border border-[#E4E8ED] bg-[#FAFAF8] p-8 rounded flex flex-col justify-between">
+<div>
+<span class="text-xs font-mono font-bold text-[#2563EB]">PROJECT 01</span>
+<h3 class="text-lg font-bold text-[#14243A] mt-2 mb-3">Intrusion Detection System</h3>
+<p class="text-sm text-[#586579] leading-relaxed mb-4">
+                  Technical project focused on anomaly detection and network traffic inspection. Executed testing on pattern matching algorithms, false-positive metrics, and stress resilience.
+                </p>
+<div class="flex flex-wrap gap-2 text-xs font-mono text-[#586579]">
+<span class="bg-white px-2.5 py-1 border border-[#E4E8ED] rounded">Network Security</span>
+<span class="bg-white px-2.5 py-1 border border-[#E4E8ED] rounded">Anomaly Validation</span>
+<span class="bg-white px-2.5 py-1 border border-[#E4E8ED] rounded">Stress Testing</span>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-[#E4E8ED] text-xs font-semibold text-[#14243A]">
+                Validation Focus: False-positive minimization
+              </div>
+</div>
+<!-- Project 2 -->
+<div class="border border-[#E4E8ED] bg-[#FAFAF8] p-8 rounded flex flex-col justify-between">
+<div>
+<span class="text-xs font-mono font-bold text-[#2563EB]">PROJECT 02</span>
+<h3 class="text-lg font-bold text-[#14243A] mt-2 mb-3">Blockchain Food Traceability</h3>
+<p class="text-sm text-[#586579] leading-relaxed mb-4">
+                  Led quality assurance for immutable ledger records tracking food supply logistics. Validated smart contract execution boundaries, data integrity, and API ingestion checkpoints.
+                </p>
+<div class="flex flex-wrap gap-2 text-xs font-mono text-[#586579]">
+<span class="bg-white px-2.5 py-1 border border-[#E4E8ED] rounded">Distributed Ledger</span>
+<span class="bg-white px-2.5 py-1 border border-[#E4E8ED] rounded">API Integrity</span>
+<span class="bg-white px-2.5 py-1 border border-[#E4E8ED] rounded">Contract Audits</span>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-[#E4E8ED] text-xs font-semibold text-[#14243A]">
+                Validation Focus: State immutability &amp; API synchronization
+              </div>
+</div>
+<!-- Project 3 -->
+<div class="border border-[#E4E8ED] bg-[#FAFAF8] p-8 rounded flex flex-col justify-between">
+<div>
+<span class="text-xs font-mono font-bold text-[#2563EB]">PROJECT 03</span>
+<h3 class="text-lg font-bold text-[#14243A] mt-2 mb-3">Hospital Management System</h3>
+<p class="text-sm text-[#586579] leading-relaxed mb-4">
+                  Comprehensive functional and role-based access testing for mission-critical medical workflows, appointment scheduling, electronic records, and user permission security.
+                </p>
+<div class="flex flex-wrap gap-2 text-xs font-mono text-[#586579]">
+<span class="bg-white px-2.5 py-1 border border-[#E4E8ED] rounded">Role-Based Access</span>
+<span class="bg-white px-2.5 py-1 border border-[#E4E8ED] rounded">E2E Workflows</span>
+<span class="bg-white px-2.5 py-1 border border-[#E4E8ED] rounded">Data Privacy</span>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-[#E4E8ED] text-xs font-semibold text-[#14243A]">
+                Validation Focus: Workflow zero-regression &amp; data privacy
+              </div>
+</div>
+<!-- Reserved Box: QA Case Studies -->
+<div class="border border-dashed border-[#586579]/40 bg-[#F3F5F7] p-8 rounded flex flex-col justify-between">
+<div>
+<span class="text-xs font-mono font-bold text-[#586579]">DOCUMENTATION ARCHIVE</span>
+<h3 class="text-lg font-bold text-[#14243A] mt-2 mb-3">QA Case Studies — To Be Added</h3>
+<p class="text-sm text-[#586579] leading-relaxed mb-4">
+                  Detailed writeups highlighting sprint-level defect reduction statistics, automated test framework migrations, and customer case histories are currently undergoing redaction for client confidentiality.
+                </p>
+</div>
+<div class="mt-6 pt-4 border-t border-[#E4E8ED] flex items-center justify-between text-xs text-[#586579]">
+<span>Status: In preparation</span>
+<span class="font-mono">Available upon request</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 09: WORKING APPROACH (4-Step Process) -->
+<section class="py-20 lg:py-24 bg-[#F3F5F7] border-b border-[#E4E8ED]">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="max-w-3xl mb-14">
+<span class="text-xs font-bold uppercase tracking-[1.5px] text-[#2563EB]">METHODOLOGY</span>
+<h2 class="mt-2 text-2xl sm:text-3xl lg:text-4xl font-bold text-[#14243A] tracking-tight">
+              A clear, structured approach to software quality.
+            </h2>
+<p class="mt-4 text-base text-[#586579] leading-relaxed">
+              Every testing engagement follows a four-stage process designed to eliminate ambiguity and yield actionable results.
+            </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Step 1 -->
+<div class="bg-white border border-[#E4E8ED] p-6 rounded">
+<span class="text-xs font-mono font-bold text-[#2563EB]">01</span>
+<h3 class="text-base font-bold text-[#14243A] mt-2 mb-2">Understand</h3>
+<p class="text-xs sm:text-sm text-[#586579] leading-relaxed">
+                Review software requirements, user personas, architecture diagrams, and known risk zones.
+              </p>
+</div>
+<!-- Step 2 -->
+<div class="bg-white border border-[#E4E8ED] p-6 rounded">
+<span class="text-xs font-mono font-bold text-[#2563EB]">02</span>
+<h3 class="text-base font-bold text-[#14243A] mt-2 mb-2">Plan</h3>
+<p class="text-xs sm:text-sm text-[#586579] leading-relaxed">
+                Define the test strategy, author test cases, specify coverage criteria, and prioritize edge scenarios.
+              </p>
+</div>
+<!-- Step 3 -->
+<div class="bg-white border border-[#E4E8ED] p-6 rounded">
+<span class="text-xs font-mono font-bold text-[#2563EB]">03</span>
+<h3 class="text-base font-bold text-[#14243A] mt-2 mb-2">Validate</h3>
+<p class="text-xs sm:text-sm text-[#586579] leading-relaxed">
+                Execute manual test cycles, run automated suites, perform API audits, and log reproducible defects.
+              </p>
+</div>
+<!-- Step 4 -->
+<div class="bg-white border border-[#E4E8ED] p-6 rounded">
+<span class="text-xs font-mono font-bold text-[#2563EB]">04</span>
+<h3 class="text-base font-bold text-[#14243A] mt-2 mb-2">Communicate</h3>
+<p class="text-xs sm:text-sm text-[#586579] leading-relaxed">
+                Deliver clear bug documentation, executive release status summaries, and recommendations for sign-off.
+              </p>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 10: PROFESSIONAL CREDENTIALS -->
+<section class="py-20 lg:py-24 bg-[#FAFAF8] border-b border-[#E4E8ED]">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="max-w-3xl mb-14">
+<span class="text-xs font-bold uppercase tracking-[1.5px] text-[#2563EB]">CREDENTIALS &amp; FOUNDATIONS</span>
+<h2 class="mt-2 text-2xl sm:text-3xl lg:text-4xl font-bold text-[#14243A] tracking-tight">
+              Academic background and professional certifications.
+            </h2>
+<p class="mt-4 text-base text-[#586579] leading-relaxed">
+              Grounding practical QA execution in solid computer science principles and industry testing frameworks.
+            </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Left: Education -->
+<div class="bg-white border border-[#E4E8ED] p-8 rounded">
+<span class="text-xs font-mono font-bold uppercase tracking-wider text-[#586579]">EDUCATION</span>
+<h3 class="text-lg font-bold text-[#14243A] mt-3">BS in Computer Science</h3>
+<div class="text-sm font-semibold text-[#2563EB] mt-0.5">Capital University of Science &amp; Technology (CUST)</div>
+<div class="text-xs font-mono text-[#586579] mt-1">Graduated 2022</div>
+<p class="mt-4 text-sm text-[#586579] leading-relaxed">
+                Rigorous curriculum covering software engineering, algorithms, database systems, computer networks, and formal testing verification models.
+              </p>
+</div>
+<!-- Right: Certifications -->
+<div class="bg-white border border-[#E4E8ED] p-8 rounded">
+<span class="text-xs font-mono font-bold uppercase tracking-wider text-[#586579]">CERTIFICATIONS</span>
+<div class="mt-4 space-y-4">
+<div class="border-b border-[#E4E8ED] pb-3">
+<div class="text-sm font-bold text-[#14243A]">Agile Manual Testing &amp; Test Design</div>
+<div class="text-xs text-[#586579]">Professional software test case design &amp; exploratory techniques</div>
+</div>
+<div class="border-b border-[#E4E8ED] pb-3">
+<div class="text-sm font-bold text-[#14243A]">Scrum Fundamentals Certified (SFC)</div>
+<div class="text-xs text-[#586579]">Agile sprint cycles, quality gates, and iterative deployment governance</div>
+</div>
+<div>
+<div class="text-sm font-bold text-[#14243A]">Jira Software &amp; Defect Management</div>
+<div class="text-xs text-[#586579]">Structured issue life-cycles, sprint boards, and bug triage workflows</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 11: CONTACT / FINAL CONVERSION (Midnight Navy #101D32) -->
+<section class="py-20 lg:py-28 bg-[#101D32] text-white border-b border-[#14243A]" id="contact">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+<!-- Left Column: Proposition & Direct Contacts (5 cols) -->
+<div class="lg:col-span-5">
+<span class="text-xs font-bold uppercase tracking-[1.5px] text-[#2563EB]">LET'S CONNECT</span>
+<h2 class="mt-3 text-3xl sm:text-4xl font-bold tracking-tight text-white leading-tight">
+                Planning a release? Let's make quality part of the conversation.
+              </h2>
+<p class="mt-5 text-sm sm:text-base text-[#94A3B8] leading-relaxed">
+                Whether you need a dedicated QA Team Lead for an upcoming product roadmap, an audit of current defect rates, or automated regression test coverage, I'm here to assist.
+              </p>
+<div class="mt-10 space-y-5 border-t border-[#1E293B] pt-8">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-[#2563EB] text-[20px] mt-0.5">mail</span>
+<div>
+<div class="text-xs uppercase tracking-wider text-[#94A3B8]">Direct Email</div>
+<a class="text-sm font-semibold text-white hover:text-[#2563EB] transition-colors" href="mailto:usama.shareef.qa@gmail.com">
+                      usama.shareef.qa@gmail.com
+                    </a>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-[#2563EB] text-[20px] mt-0.5">link</span>
+<div>
+<div class="text-xs uppercase tracking-wider text-[#94A3B8]">Professional Network</div>
+<a class="text-sm font-semibold text-white hover:text-[#2563EB] transition-colors" href="https://linkedin.com" rel="noopener noreferrer" target="_blank">
+                      linkedin.com/in/usamashareef
+                    </a>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-[#2563EB] text-[20px] mt-0.5">schedule</span>
+<div>
+<div class="text-xs uppercase tracking-wider text-[#94A3B8]">Response Window</div>
+<span class="text-sm text-[#E2E8F0]">Typically within 24 hours (Monday to Friday)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Clean White Inquiry Form Container (7 cols) -->
+<div class="lg:col-span-7">
+<div class="bg-white text-[#14243A] p-8 sm:p-10 rounded border border-[#E4E8ED] shadow-xl">
+<h3 class="text-xl font-bold text-[#14243A]">Send an Inquiry</h3>
+<p class="mt-1 text-xs text-[#586579] mb-6">Fill in your requirements below for an initial discussion.</p>
+<form class="space-y-4" onsubmit="event.preventDefault(); alert('Inquiry received. Thank you for reaching out!');">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block text-xs font-semibold text-[#14243A] uppercase tracking-wider mb-1.5" for="form-name">Your Name</label>
+<input class="w-full px-3.5 py-2.5 text-sm bg-[#FAFAF8] border border-[#E4E8ED] rounded focus:border-[#2563EB] focus:ring-1 focus:ring-[#2563EB] outline-none transition" id="form-name" placeholder="Jane Doe" required="" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-semibold text-[#14243A] uppercase tracking-wider mb-1.5" for="form-email">Email Address</label>
+<input class="w-full px-3.5 py-2.5 text-sm bg-[#FAFAF8] border border-[#E4E8ED] rounded focus:border-[#2563EB] focus:ring-1 focus:ring-[#2563EB] outline-none transition" id="form-email" placeholder="jane@company.com" required="" type="email"/>
+</div>
+</div>
+<div>
+<label class="block text-xs font-semibold text-[#14243A] uppercase tracking-wider mb-1.5" for="form-service">Primary Area of Interest</label>
+<select class="w-full px-3.5 py-2.5 text-sm bg-[#FAFAF8] border border-[#E4E8ED] rounded focus:border-[#2563EB] focus:ring-1 focus:ring-[#2563EB] outline-none transition text-[#14243A]" id="form-service">
+<option value="pre-launch">Pre-Launch QA Audit</option>
+<option value="ongoing">Ongoing Sprint QA Support</option>
+<option value="automation">Test Automation Setup (Cypress / Selenium)</option>
+<option value="advisory">QA Process Consulting &amp; Advisory</option>
+<option value="other">Other / Custom Testing Request</option>
+</select>
+</div>
+<div>
+<label class="block text-xs font-semibold text-[#14243A] uppercase tracking-wider mb-1.5" for="form-message">Project Overview &amp; Timeline</label>
+<textarea class="w-full px-3.5 py-2.5 text-sm bg-[#FAFAF8] border border-[#E4E8ED] rounded focus:border-[#2563EB] focus:ring-1 focus:ring-[#2563EB] outline-none transition" id="form-message" placeholder="Tell me briefly about your application, target release date, and key testing priorities..." required="" rows="4"></textarea>
+</div>
+<button class="w-full h-[48px] bg-[#2563EB] hover:bg-[#1d4ed8] text-white font-semibold text-xs uppercase tracking-wider rounded inline-flex items-center justify-center gap-2 transition-all active:scale-[0.99] shadow-sm" type="submit">
+<span>Send Inquiry</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- SECTION 12: PREMIUM FOOTER -->
+<footer class="bg-[#FAFAF8] border-t border-[#E4E8ED]">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-[#E4E8ED]">
+<!-- Wordmark -->
+<div class="flex flex-col text-center md:text-left">
+<span class="text-base font-bold text-[#14243A] uppercase tracking-tight">USAMA SHAREEF</span>
+<span class="text-[9px] font-semibold text-[#586579] uppercase tracking-[1.5px] mt-0.5">SOFTWARE QUALITY ASSURANCE</span>
+</div>
+<!-- Nav Links -->
+<nav class="flex flex-wrap items-center justify-center gap-6 text-xs text-[#586579]">
+<a class="hover:text-[#14243A] transition-colors" href="#about">About</a>
+<a class="hover:text-[#14243A] transition-colors" href="#expertise">Expertise</a>
+<a class="hover:text-[#14243A] transition-colors" href="#services">Services</a>
+<a class="hover:text-[#14243A] transition-colors" href="#experience">Experience</a>
+<a class="hover:text-[#14243A] transition-colors" href="#work">Work</a>
+<a class="hover:text-[#14243A] transition-colors" href="#contact">Contact</a>
+</nav>
+<!-- Direct Links -->
+<div class="flex items-center gap-4 text-xs font-semibold">
+<a class="text-[#586579] hover:text-[#14243A] transition-colors" href="mailto:usama.shareef.qa@gmail.com">Email</a>
+<span class="text-[#E4E8ED]">·</span>
+<a class="text-[#586579] hover:text-[#14243A] transition-colors" href="https://linkedin.com" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+</div>
+</div>
+<div class="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#586579]">
+<p>© 2026 Usama Shareef. All rights reserved.</p>
+<p class="font-medium">Built around quality, clarity, and trust.</p>
+</div>
+</div>
+</footer>
+</div>
+<!-- Interactive Viewport Toggle Logic -->
+<script>
+    function setViewport(mode) {
+      const frame = document.getElementById('viewport-frame');
+      const btnDesktop = document.getElementById('view-desktop');
+      const btnTablet = document.getElementById('view-tablet');
+      const btnMobile = document.getElementById('view-mobile');
+
+      // Reset button styles
+      [btnDesktop, btnTablet, btnMobile].forEach(btn => {
+        btn.className = "px-3 py-1 text-xs rounded text-[#586579] hover:text-[#14243A] flex items-center gap-1.5 transition-colors";
+      });
+
+      const activeBtnClasses = "px-3 py-1 text-xs rounded bg-[#E4E8ED] text-[#14243A] font-semibold flex items-center gap-1.5 transition-colors";
+
+      if (mode === 'desktop') {
+        frame.style.maxWidth = '100%';
+        frame.classList.remove('border-[#E4E8ED]', 'my-8', 'shadow-2xl', 'rounded-xl');
+        frame.classList.add('border-transparent');
+        btnDesktop.className = activeBtnClasses;
+      } else if (mode === 'tablet') {
+        frame.style.maxWidth = '768px';
+        frame.classList.add('border-[#E4E8ED]', 'my-8', 'shadow-2xl', 'rounded-xl');
+        frame.classList.remove('border-transparent');
+        btnTablet.className = activeBtnClasses;
+      } else if (mode === 'mobile') {
+        frame.style.maxWidth = '390px';
+        frame.classList.add('border-[#E4E8ED]', 'my-8', 'shadow-2xl', 'rounded-xl');
+        frame.classList.remove('border-transparent');
+        btnMobile.className = activeBtnClasses;
+      }
+    }
+  </script>
+</body></html>

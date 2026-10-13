@@ -1,0 +1,3 @@
+import 'server-only';
+import {configured,serverDB} from './supabase';
+export async function requireAdmin(){if(!configured())throw new Error('UNAUTHORIZED');const supabase=await serverDB();const {data:{user},error}=await supabase.auth.getUser();if(error||!user)throw new Error('UNAUTHORIZED');const {data}=await supabase.from('admin_profiles').select('role').eq('user_id',user.id).single();if(!data||data.role!=='admin')throw new Error('FORBIDDEN');const {data:assurance}=await supabase.auth.mfa.getAuthenticatorAssuranceLevel();if(assurance?.nextLevel==='aal2'&&assurance.currentLevel!=='aal2')throw new Error('MFA_REQUIRED');return {supabase,user}}

@@ -1,0 +1,6 @@
+import 'server-only';
+import {NextRequest,NextResponse} from 'next/server';
+import {privilegedDB} from './supabase';
+export function assertOrigin(request:NextRequest){const origin=request.headers.get('origin');const url=new URL(request.url);const expected=`${url.protocol}//${request.headers.get('host')||url.host}`;if(!origin||origin!==expected)throw new Error('FORBIDDEN')}
+export async function rateLimit(request:NextRequest,bucket:string,limit:number,seconds:number){const ip=(request.headers.get('x-vercel-forwarded-for')?.split(',')[0]||request.headers.get('cf-connecting-ip')||request.headers.get('x-forwarded-for')?.split(',')[0]||'unknown').trim().slice(0,80);const {data,error}=await privilegedDB().rpc('consume_rate_limit',{p_key:bucket+':'+ip,p_limit:limit,p_window_seconds:seconds});if(error)throw new Error('Rate limiter unavailable');if(!data)throw new Error('RATE_LIMIT')}
+export function failure(error:unknown){const message=error instanceof Error?error.message:'';const status=message==='UNAUTHORIZED'?401:message==='FORBIDDEN'||message==='MFA_REQUIRED'?403:message==='RATE_LIMIT'?429:400;return NextResponse.json({error:status===429?'Too many requests. Please try again later.':status===401?'Sign in required.':status===403?'Access denied.':'Request could not be completed. Check your inputs and try again.'},{status})}
